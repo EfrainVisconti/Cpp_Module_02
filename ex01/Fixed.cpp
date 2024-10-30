@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:43:22 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/28 21:54:02 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/30 19:14:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ Fixed::Fixed() : _value(0)
 Fixed::Fixed(const int value)
 {
     std::cout << "Int constructor called" << std::endl;
-    this->_value = value << this->_fractionalBits; //Equivalent to multiply by 2 with exponent _fractionalBits
+    this->_value = value << _fractionalBits; //Equivalent to multiply by 2 with exponent _fractionalBits
 }
 
 Fixed::Fixed(const float value)
 {
     std::cout << "Float constructor called" << std::endl;
-    this->_value = roundf(value * pow2(this->_fractionalBits));
+    this->_value = roundf(value * pow2(_fractionalBits));
 }
 
 Fixed::~Fixed()
