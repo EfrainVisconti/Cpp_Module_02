@@ -6,9 +6,11 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:27:55 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/28 22:51:42 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/30 03:18:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Fixed.hpp"
 
 int main( void )
 {
@@ -21,5 +23,8 @@ int main( void )
     std::cout << a << std::endl;
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
+
+    std::cout << Fixed::min( a, b ) << std::endl;
+    
     return 0;
 }

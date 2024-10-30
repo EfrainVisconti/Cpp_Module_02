@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:27:42 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/29 22:37:06 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/30 03:09:35 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ class Fixed
         void    setRawBits(int const raw);
         float   toFloat() const;
         int     toInt() const;
+        static Fixed        &min(Fixed &a, Fixed &b);
+		static const Fixed  &min(const Fixed &a, const Fixed &b);
+		static Fixed        &max(Fixed &a, Fixed &b);
+		static const Fixed  &max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream    &operator<<(std::ostream &out, const Fixed &other);

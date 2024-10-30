@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:27:24 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/29 23:04:34 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/30 03:14:14 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ Fixed   Fixed::operator*(const Fixed &other) const
 
 Fixed   Fixed::operator/(const Fixed &other) const
 {
-    return Fixed(this->toFloat() / other.toFloat();
+    return Fixed(this->toFloat() / other.toFloat());
 }
 
 Fixed   &Fixed::operator++()
@@ -158,4 +158,24 @@ Fixed   Fixed::operator--(int)
     Fixed   tmp(*this);
     this->_value -= _epsilon;
     return tmp;
+}
+
+Fixed   &Fixed::min(Fixed &a, Fixed &b)
+{
+    return (a < b) ? a : b;
+}
+
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
+{
+    return (a < b) ? a : b;
+}
+
+Fixed   &Fixed::max(Fixed &a, Fixed &b)
+{
+    return (a > b) ? a : b;
+}
+
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+    return (a > b) ? a : b;
 }
