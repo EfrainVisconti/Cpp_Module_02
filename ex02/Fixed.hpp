@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:27:42 by codespace         #+#    #+#             */
-/*   Updated: 2024/10/30 03:09:35 by codespace        ###   ########.fr       */
+/*   Updated: 2024/10/30 20:36:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
     private:
         int _value;
         static const int _fractionalBits = 8;
-        static const int _epsilon = 1;
+        static const int _epsilon = 1; //equivalent to 1/256 or 0.00390625
 
     public:
         Fixed();
